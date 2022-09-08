@@ -1,0 +1,54 @@
+{
+  "name": "agada",
+  "version": "1.0.0",
+  "description": "All Round Lab Grown Diamonds",
+  "main": "index.js",
+  "author": "Webcodery",
+  "license": "GPL-2.0-or-later",
+  "keywords": [
+    "WordPress",
+    "Theme"
+  ],
+  "homepage": "https://github.com/iudchenko",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iudchenko"
+  },
+  "bugs": {
+    "url": "https://github.com/iudchenko"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^19.2.2",
+    "assert": "^2.0.0",
+    "dir-archiver": "^1.1.1",
+    "node-sass": "^7.0.1",
+    "rtlcss": "^3.5.0",
+    "stream-browserify": "^3.0.0"
+  },
+  "rtlcssConfig": {
+    "options": {
+      "autoRename": false,
+      "autoRenameStrict": false,
+      "blacklist": {},
+      "clean": true,
+      "greedy": false,
+      "processUrls": false,
+      "stringMap": []
+    },
+    "plugins": [],
+    "map": false
+  },
+  "dependencies": {
+    "@wordpress/scripts": "*",
+    "axios": "^0.27.2",
+    "normalize.css": "^8.0.1",
+    "swiper": "^8.2.2"
+  },
+  "scripts": {
+    "build": "wp-scripts build",
+    "start": "wp-scripts start",
+    "dev": "wp-scripts start",
+    "devFast": "wp-scripts start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

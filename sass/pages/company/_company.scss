@@ -1,0 +1,175 @@
+.company {
+  h2 {
+    font-family: $font__secondary;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    text-transform: none;
+    margin-bottom: 41px;
+  }
+  p {
+    font-family: $font__main;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    margin: 0;
+  }
+  .col-2 {
+    gap: 0;
+    & > * {
+      max-width: 50%;
+    }
+  }
+
+  .company-saving {
+    width: 100%;
+    min-height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background: url("/img/company/bg.jpg") center center/cover no-repeat;
+
+    background-image: url("/img/company/bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    @media screen and (min-width: $breakpoint-desktop-4k) {
+      height: calc(100vh - 140px - 81px);
+    }
+    @media screen and (max-width: $breakpoint-mobile) {
+      min-height: 500px;
+      background-image: url("/img/company/bg-mob.jpg");
+      background-position: bottom;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: scroll;
+    }
+
+    &__title {
+      font-family: $font__secondary;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 128px;
+      line-height: 150px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #ffffff;
+      @media screen and (max-width: $breakpoint-mobile) {
+        font-size: 64px;
+        line-height: 80px;
+        padding: 0 24px;
+        word-break: keep-all;
+      }
+    }
+  }
+
+  .company-mission {
+    width: 100%;
+    min-height: 430px;
+    background: url("/img/company/mission.jpg") center center/cover no-repeat;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    @media screen and (min-width: $breakpoint-desktop-4k) {
+      height: 30vh;
+    }
+    @media screen and (max-width: $breakpoint-desktop) {
+      padding: 0 24px;
+    }
+    @media screen and (max-width: $breakpoint-mobile) {
+      padding: 80px 0;
+      background: url("/img/company/mission.jpg") left center/cover no-repeat;
+    }
+
+    &__title {
+      color: #ffffff;
+    }
+    &__p {
+      max-width: 800px;
+      text-align: center;
+
+      color: #ffffff;
+      @media screen and (max-width: $breakpoint-mobile) {
+        padding: 0 24px;
+      }
+    }
+  }
+  .company-origins {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    @media screen and (max-width: $breakpoint-tablet-landscape) {
+      img {
+        max-width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+      }
+      flex-flow: column nowrap;
+    }
+
+    &__title {
+      text-align: left;
+      [dir="rtl"] & {
+        text-align: right;
+      }
+    }
+    &__content {
+      max-width: 600px;
+      [dir="rtl"] & {
+        margin-right: 100px;
+      }
+      @media screen and (max-width: $breakpoint-desktop) {
+        padding: 0 24px;
+      }
+      @media screen and (max-width: $breakpoint-tablet-landscape) {
+        padding: 80px 24px;
+      }
+    }
+  }
+
+  .company-quality {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #dadcd6;
+    @media screen and (max-width: $breakpoint-tablet-landscape) {
+      img {
+        max-width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+      }
+      flex-flow: column nowrap;
+    }
+    &__title {
+      text-align: left;
+      [dir="rtl"] & {
+        text-align: right;
+      }
+    }
+    &__content {
+      max-width: 500px;
+      margin-right: 100px;
+      [dir="rtl"] & {
+        margin-right: 0;
+        margin-left: 100px;
+      }
+
+      @media screen and (max-width: $breakpoint-desktop) {
+        padding: 0 24px;
+      }
+      @media screen and (max-width: $breakpoint-tablet-landscape) {
+        max-width: 600px;
+        padding: 80px 24px;
+        margin: 0;
+      }
+    }
+  }
+}

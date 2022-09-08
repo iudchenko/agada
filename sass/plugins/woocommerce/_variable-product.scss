@@ -1,0 +1,80 @@
+.single-product {
+  .product-type-variable {
+    .variations {
+      margin-bottom: 15px;
+      th {
+        text-align: left;
+        font-family: $font__main;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 23px;
+        color: #5d5d5d;
+        [dir="rtl"] & {
+          text-align: right;
+        }
+        label {
+          &:after {
+            content: ":";
+          }
+        }
+        label[for="pa_ring-size"] {
+          display: none;
+        }
+      }
+    }
+
+    .product__details {
+      @media screen and (max-width: $breakpoint-tablet) {
+        flex-flow: row wrap;
+      }
+      .product__summary {
+        .product__btns {
+          @media screen and (max-width: $breakpoint-mobile) {
+            flex-flow: row nowrap;
+          }
+        }
+      }
+    }
+
+    // .woo-variation-swatches .variable-items-wrapper .variable-item.selected {
+    //   box-shadow: 0 0 0 1px #7f573b !important;
+    // }
+
+    .reset_variations {
+      display: none !important;
+    }
+
+    select {
+      height: 40px;
+      width: 390px;
+      text-align: center !important;
+      font-size: 14px;
+      color: #7f573b;
+      border: 1px solid rgba(127, 87, 59, 0.4);
+      border-radius: 0px !important;
+      padding: 0 15px;
+      cursor: pointer;
+      background: url("/img/product-page/selection/product-arrow.svg") no-repeat
+        right 15px center;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      [dir="rtl"] & {
+        background: url("/img/product-page/selection/product-arrow.svg")
+          no-repeat left 15px center;
+      }
+      @media screen and (max-width: $breakpoint-tablet) {
+        width: 220px;
+      }
+    }
+
+    .single_add_to_cart_button {
+      height: 40px;
+      width: 100% !important;
+      max-width: 390px;
+      // @media screen and (max-width: $breakpoint-tablet) {
+      //   width: 100% !important;
+      // }
+    }
+  }
+}

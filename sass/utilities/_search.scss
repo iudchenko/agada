@@ -1,0 +1,20 @@
+.search-form {
+  display: flex;
+}
+.search-field {
+  border: 1px solid #5d5d5d;
+  border-radius: 0 !important;
+  height: 40px;
+}
+.search-submit {
+  width: 140px;
+  height: 40px;
+  padding: 0 !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  // background: url("/img/menu/search-icon-white.svg") no-repeat center
+  //     center/19px 19px,
+  //   #000 !important;
+  border: none !important;
+  border-radius: 0 !important;
+}

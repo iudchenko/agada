@@ -1,0 +1,24 @@
+.custom-breadcrumbs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  padding: 32px 0;
+  font-family: $font__main;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+
+  a {
+    text-decoration: none;
+    color: $color__link;
+    font-style: normal;
+    font-family: $font__main;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+  }
+}

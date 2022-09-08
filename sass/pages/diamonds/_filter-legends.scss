@@ -1,0 +1,34 @@
+.legend-container {
+  padding: 16px 6px 0 6px;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  font-family: $font__main;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  text-align: center;
+  text-transform: none;
+  color: $color__link;
+
+  * {
+    flex: 1;
+  }
+}
+
+// .color-slider__legend {
+//   width: 100%;
+// }
+// .cut-slider__legend {
+//   width: 100%;
+// }
+
+.filters__cut,
+.filters__fluorescence {
+  .legend-container:lang(ru) {
+    font-size: 8px;
+    line-height: 11px;
+  }
+}

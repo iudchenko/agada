@@ -1,0 +1,25 @@
+.certified-graded {
+  margin: 48px 0;
+
+  .col-2 {
+    align-items: center;
+  }
+  &__img {
+    width: 600px;
+  }
+
+  &__text {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+  }
+
+  &__title {
+    max-width: 403px;
+    text-transform: uppercase;
+  }
+
+  &__desc {
+    margin: 0 0 16px 0;
+  }
+}

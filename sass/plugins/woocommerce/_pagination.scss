@@ -1,0 +1,15 @@
+.woocommerce-pagination {
+  ul {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}

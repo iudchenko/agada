@@ -1,0 +1,81 @@
+.woocommerce-orders.logged-in .my-account .entry-content .woocommerce {
+  .woocommerce-MyAccount-content {
+  }
+
+  .woocommerce-orders-table__row {
+    display: grid;
+    gap: 8px 4px;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 20px 1fr;
+    padding: 8px 0;
+    border-top: 1px solid #dddddd;
+    &:last-child {
+      border-bottom: 1px solid #dddddd;
+    }
+    .woocommerce-orders-table__cell-order-date {
+      grid-column: 1 / -1;
+      grid-row: 1 / 2;
+      font-family: $font__main;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      color: #afafaf;
+      &:before {
+        content: "";
+      }
+      [dir="rtl"] & {
+        text-align: left;
+      }
+    }
+    .woocommerce-orders-table__cell-order-total {
+      grid-column: 2 / -1;
+      grid-row: 2 / -1;
+      text-align: right;
+      color: #000;
+      &:before {
+        content: "";
+      }
+      [dir="rtl"] & {
+        text-align: left;
+      }
+    }
+    .woocommerce-orders-table__cell-order-item {
+      grid-column: 1 / 2;
+      grid-row: 2 / -1;
+      a {
+        text-decoration: none;
+        color: #5d5d5d;
+      }
+      &:before {
+        content: "";
+      }
+      @media screen and (max-width: $breakpoint-mobile) {
+        text-align: left;
+      }
+      [dir="rtl"] & {
+        text-align: right;
+      }
+    }
+  }
+  tfoot {
+    .custom-order-total-row {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: 1fr;
+      padding: 8px 0;
+      &__text {
+        font-family: $font__main;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: #5d5d5d;
+      }
+      &__total {
+        color: #000;
+        text-align: right;
+      }
+    }
+  }
+}

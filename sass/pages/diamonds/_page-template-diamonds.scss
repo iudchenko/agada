@@ -1,0 +1,19 @@
+.page-template-diamonds {
+  main {
+    &.overlay {
+      @media screen and (max-width: $breakpoint-tablet) {
+        position: relative;
+        &:before {
+          content: "";
+          background: #000;
+          opacity: 0.5;
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 98;
+        }
+      }
+    }
+  }
+}

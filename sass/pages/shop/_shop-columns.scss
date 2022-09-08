@@ -1,0 +1,129 @@
+.create-ring {
+  h2 {
+    text-align: center;
+    
+  }
+
+  .col p {
+    min-height: 68px;
+    max-width: 258px;
+  }
+
+  .col {
+    [dir="rtl"] & {
+      transform: scaleX(-1);
+      align-items: flex-end;
+    }
+    [dir="rtl"] & * {
+      transform: scaleX(-1);
+    }
+  }
+
+  .col--1 {
+    background: url("/img/shop/agada-diamond-rings.jpg") center center/cover no-repeat;
+
+  }
+
+  .col--2 {
+    background: url("/img/shop/agada-gemstone-rings.jpg") center center/cover no-repeat;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+}
+
+.jewelry-collections {
+
+  .col {
+    [dir="rtl"] & {
+      transform: scaleX(-1);
+      align-items: flex-end;
+    }
+    [dir="rtl"] & * {
+      transform: scaleX(-1);
+    }
+  }
+  
+  .col h2 {
+    text-align: center;
+  }
+  margin: 70px 0;
+  .col p {
+    min-height: 53px;
+    max-width: 370px;
+    margin-bottom: 14px;
+  }
+
+  .col--1 {
+    background: url("/img/shop/agada-diamonds-ensemble-collections.jpg") center center/cover no-repeat;
+  }
+
+  .col--2 {
+    background: url("/img/shop/agada-diamonds-geometric-collections.jpg") center center/cover no-repeat;
+  }
+}
+
+
+.explore-more {
+  margin: 70px 0;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .col {
+    [dir="rtl"] & {
+      transform: scaleX(-1);
+      align-items: flex-end;
+    }
+    [dir="rtl"] & * {
+      transform: scaleX(-1);
+    }
+  }
+
+  .col h2 {
+    text-align: center;
+  }
+  .col p {
+    min-height: 53px;
+    max-width: 258px;
+    margin-bottom: 14px;
+  }
+
+  .col--1 {
+    background: url("/img/shop/agada-create-your-own-earrings.jpg") center center/cover no-repeat;
+  }
+
+  .col--2 {
+    background: url("/img/shop/agada-diamonds-create-necklace.jpg") center center/cover no-repeat;
+
+  h3 {
+    color: white;
+    
+  }
+  p {
+    color: white;
+  }
+  .btn-link--white {
+    text-transform: none;
+    background: transparent;
+    // border: 1px solid white;
+    padding: 11px 20px;
+    min-width: 238px;
+    font-family: $font__main;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    text-transform: none;
+    &:hover {
+      background: #000;
+    }
+  }
+  }
+
+}

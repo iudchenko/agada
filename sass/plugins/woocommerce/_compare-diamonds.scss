@@ -1,0 +1,114 @@
+.compare-diamonds {
+  padding-top: 36px;
+  padding-bottom: 56px;
+  background: #f8f8f8;
+  font-family: $font__main;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  color: #8b8b8b;
+  @media screen and (max-width: $breakpoint-mobile) {
+    font-size: 11px;
+  }
+  h4 {
+    @media screen and (max-width: $breakpoint-mobile) {
+      font-size: 13px;
+    }
+  }
+
+  &__title {
+    font-family: $font__main;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #5d5d5d;
+    margin-bottom: 59px;
+  }
+
+  table {
+    border: none;
+    border-collapse: collapse;
+    thead {
+      width: 100%;
+      tr {
+        th {
+          @media screen and (max-width: $breakpoint-mobile) {
+            width: 20%;
+          }
+          &:first-child {
+            width: 145px;
+            @media screen and (max-width: $breakpoint-mobile) {
+              width: 20%;
+            }
+          }
+          &:nth-child(2) {
+            border-left: 1px solid #7f573b;
+            border-right: 1px solid #7f573b;
+            border-top: 1px solid #7f573b;
+            width: 200px;
+            color: #7f573b;
+            @media screen and (max-width: $breakpoint-mobile) {
+              width: 20%;
+            }
+            h4 {
+              color: #7f573b;
+            }
+          }
+        }
+      }
+    }
+    tbody {
+      width: 100%;
+
+      tr {
+        height: 70px;
+        &:nth-child(odd) {
+          background-color: #f8f8f8;
+        }
+        &:nth-child(even) {
+          background-color: #fff;
+        }
+        &:last-child {
+          background-color: #f8f8f8;
+          color: #7f573b;
+        }
+        td {
+          @media screen and (max-width: $breakpoint-mobile) {
+            width: 20%;
+          }
+          &:first-child {
+            text-align: left;
+            padding: 12px;
+            width: 145px;
+            @media screen and (max-width: $breakpoint-mobile) {
+              width: 20%;
+            }
+          }
+          &:nth-child(2) {
+            border-left: 1px solid #7f573b;
+            border-right: 1px solid #7f573b;
+            width: 200px;
+            color: #7f573b;
+            @media screen and (max-width: $breakpoint-mobile) {
+              width: 20%;
+            }
+          }
+        }
+        &:last-child {
+          td:nth-child(2) {
+            border-bottom: 1px solid #7f573b;
+          }
+        }
+      }
+    }
+  }
+  // &__grid {
+  //   display: grid;
+  //   align-items: start;
+  //   grid-template-columns: repeat(5, 1fr);
+  // }
+}

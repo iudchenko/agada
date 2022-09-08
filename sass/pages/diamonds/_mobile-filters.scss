@@ -1,0 +1,85 @@
+.lab-diamonds__mobile-btns {
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 24px;
+  height: 50px;
+  margin-bottom: 16px;
+  position: relative;
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    display: flex;
+  }
+  * {
+    flex: 1;
+    cursor: pointer;
+    text-align: center;
+    // height: 100%;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    span {
+      padding-left: 24px;
+      [dir="rtl"] & {
+        padding-right: 24px;
+        padding-left: 0;
+      }
+    }
+  }
+
+  .lab-diamonds__mobile-filtering {
+    span {
+      position: relative;
+    }
+    & span:before {
+      content: "";
+      position: absolute;
+      background: url("/img/diamonds/filters.svg") no-repeat center
+        center/contain;
+      width: 15px;
+      height: 15px;
+      left: 0;
+      [dir="rtl"] & {
+        right: 0;
+      }
+    }
+  }
+
+  .lab-diamonds__mobile-sorting {
+    span {
+      position: relative;
+    }
+    & span:before {
+      content: "";
+      position: absolute;
+      background: url("/img/diamonds/sorting.svg") no-repeat center
+        center/contain;
+      width: 15px;
+      height: 15px;
+      left: 0;
+      [dir="rtl"] & {
+        right: 0;
+      }
+    }
+    ul {
+      position: absolute;
+      margin: 0;
+      padding: 10px;
+      list-style-type: none;
+      background: #fff;
+      z-index: 97;
+      font-size: 13px;
+      color: #5d5d5d;
+      &.hidden {
+        display: none;
+      }
+
+      li {
+        height: 32px;
+        display: flex;
+        align-items: center;
+        text-align: left;
+      }
+    }
+  }
+}

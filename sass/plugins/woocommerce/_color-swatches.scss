@@ -1,0 +1,35 @@
+.woo-variation-swatches .variable-items-wrapper {
+  flex-flow: row nowrap;
+  justify-content: center;
+  gap: 10px;
+}
+.product__btns .variable-items-wrapper {
+  justify-content: flex-start;
+}
+
+.woo-selected-variation-item-name {
+  font-weight: 400;
+}
+
+//Jewelry metal color variations
+.color-variable-item-red-gold {
+  background: linear-gradient(90deg, #ff7a00 0%, #ffb876 100%);
+}
+
+.color-variable-item-white-gold {
+  background: linear-gradient(90deg, #cccccc 0%, #fcfcfc 100%);
+}
+
+.color-variable-item-yellow-gold {
+  background: linear-gradient(180deg, #ffd600 0%, #fffcab 100%);
+}
+
+.variable-item.selected {
+  box-shadow: 0 0 0 2px #7f573b !important;
+}
+
+// .related.products {
+//   .variable-items-wrapper {
+//     justify-content: center !important;
+//   }
+// }

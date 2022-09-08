@@ -1,0 +1,62 @@
+#gform_1.subscribe-form {
+  display: flex;
+  gap: 23px;
+
+  label {
+    display: none;
+  }
+
+  .gform_validation_container {
+    display: none;
+  }
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 16px;
+  }
+
+  input[type="email"] {
+    height: 40px;
+    min-width: 450px;
+    border: 1px solid $color__text-input;
+    border-radius: 0;
+    color: $color__text-input-focus;
+
+    &::placeholder {
+      color: $color__text-input;
+    }
+
+    &:focus {
+      border-color: #000;
+    }
+    @media screen and (max-width: $breakpoint-tablet-landscape) {
+      min-width: 270px;
+    }
+  }
+
+  .gform_footer.top_label {
+    margin: 0;
+    padding: 0;
+    input {
+      height: 100%;
+      margin-bottom: 0;
+    }
+
+    input[type="submit"] {
+      height: 40px;
+      background: #000;
+      color: #fff;
+      font-weight: 500;
+      border-radius: 0;
+      border: none;
+      min-width: 180px;
+      cursor: pointer;
+      font-size: 16px;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

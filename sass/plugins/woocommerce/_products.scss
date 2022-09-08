@@ -1,0 +1,131 @@
+ul.products {
+  margin: 0;
+  padding: 0;
+  // display: flex;
+  // flex-flow: row wrap;
+  // gap: 15px;
+  // // justify-content: space-between;
+  // align-items: flex-start;
+  // margin: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 150px;
+  align-items: end;
+  @media screen and (max-width: $breakpoint-tablet) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+  }
+
+  li.product {
+    list-style: none;
+    position: relative;
+    margin-bottom: 2em;
+
+    width: auto;
+    margin-bottom: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+    a {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: flex-end;
+      align-items: center;
+      height: 100%;
+    }
+
+    img {
+      display: block;
+      margin-bottom: auto;
+    }
+
+    .button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #000;
+      color: #fff;
+      max-width: 205px;
+      height: 40px;
+      font-weight: 500;
+      border-radius: 0;
+      border: none;
+      font-size: 16px;
+      margin: 15px 0 0 0;
+      text-transform: uppercase;
+      font-family: $font__secondary;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+.woocommerce-loop-product__title {
+  font-family: $font__main;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 15px !important;
+  text-align: center;
+  color: #8b8b8b;
+  padding-top: 20px;
+  text-transform: capitalize;
+}
+.woocommerce-Price-amount {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 17px;
+  text-align: center;
+  color: #7f573b;
+  display: block;
+}
+
+.woocommerce-products-header__title {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 45px 0 20px 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+// @media screen and (min-width: 48em) {
+//   ul.products {
+//     li.product {
+//       @include column-width(3);
+//       float: left;
+//       // margin-right: $columns__margin;
+
+//       &.first {
+//         clear: both;
+//       }
+
+//       &.last {
+//         margin-right: 0;
+//       }
+//     }
+//   }
+
+// ul.products.columns-1 {
+//   li.product {
+//     float: none;
+//     width: 100%;
+//   }
+// }
+
+// @for $i from 2 through 6 {
+//   ul.products.columns-#{$i} {
+//     li.product {
+//       @include column-width($i);
+//     }
+//   }
+// }
+// }

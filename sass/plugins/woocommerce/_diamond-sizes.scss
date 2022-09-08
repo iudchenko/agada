@@ -1,0 +1,147 @@
+.about-diamond {
+  &__wrapper {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: repeat(2, 1fr);
+    @media screen and (max-width: $breakpoint-tablet) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  &__link {
+    cursor: pointer;
+  }
+  &__carat-slider {
+    height: 50px;
+    width: 100%;
+    max-width: 550px;
+    margin-top: 60px;
+    position: relative;
+    background-color: #7f573b;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__carat-info {
+    max-width: 550px;
+    padding-top: 3px;
+    font-family: $font__main;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    color: #8b8b8b;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    * {
+      flex: 1;
+    }
+    @media screen and (max-width: $breakpoint-mobile) {
+      font-size: 9px;
+      line-height: 12px;
+    }
+  }
+
+  &__marker {
+    width: 9px;
+    height: 37px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    transform: translateX(-50%);
+    top: -9px;
+    .marker__line-1 {
+      background: #7f573b;
+      height: 10px;
+      width: 1px;
+    }
+    .marker__line-2 {
+      background: #fff;
+      height: 24px;
+      width: 1px;
+    }
+    .marker__ellipse {
+      background: url("/img/product-page/about-diamond/marker/ellipse.svg")
+        no-repeat center center/contain;
+      height: 9px;
+      width: 9px;
+    }
+    .marker__info {
+      position: absolute;
+      text-align: center;
+      font-family: $font__main;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 15px;
+      text-align: center;
+      color: #8b8b8b;
+      top: -30px;
+      width: 80px;
+    }
+  }
+
+  &__diamond-sizes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("/img/product-page/about-diamond/diamond-sizes/triangles.svg")
+      no-repeat center center/contain;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__diamond-size--1 {
+    background: url("/img/product-page/about-diamond/diamond-sizes/1.svg")
+      no-repeat center center/contain;
+    width: 8px;
+    height: 11px;
+  }
+  &__diamond-size--2 {
+    background: url("/img/product-page/about-diamond/diamond-sizes/2.svg")
+      no-repeat center center/contain;
+    width: 10px;
+    height: 15px;
+  }
+  &__diamond-size--3 {
+    background: url("/img/product-page/about-diamond/diamond-sizes/3.svg")
+      no-repeat center center/contain;
+    width: 12px;
+    height: 17px;
+  }
+  &__diamond-size--4 {
+    background: url("/img/product-page/about-diamond/diamond-sizes/4.svg")
+      no-repeat center center/contain;
+    width: 14px;
+    height: 21px;
+  }
+  &__diamond-size--5 {
+    background: url("/img/product-page/about-diamond/diamond-sizes/5.svg")
+      no-repeat center center/contain;
+    width: 14px;
+    height: 23px;
+  }
+  &__diamond-size--6 {
+    background: url("/img/product-page/about-diamond/diamond-sizes/6.svg")
+      no-repeat center center/contain;
+    width: 18px;
+    height: 27px;
+  }
+  &__diamond-size--7 {
+    background: url("/img/product-page/about-diamond/diamond-sizes/7.svg")
+      no-repeat center center/contain;
+    width: 18px;
+    height: 29px;
+  }
+  &__diamond-size--8 {
+    background: url("/img/product-page/about-diamond/diamond-sizes/8.svg")
+      no-repeat center center/contain;
+    width: 20px;
+    height: 33px;
+  }
+}

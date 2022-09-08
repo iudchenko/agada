@@ -1,0 +1,32 @@
+.woocommerce
+  button:not(.menu-toggle):not(.customize-partial-edit-shortcut-button) {
+  width: 205px;
+  height: 40px;
+  padding: 11px;
+  background: #7f573b;
+  font-family: $font__main;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #ffffff;
+  text-transform: none;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &.btn--transparent {
+    background: transparent;
+    width: 160px;
+    color: #7f573b;
+    border: 1px solid #7f573b;
+
+    &:hover {
+      background: #7f573b;
+      color: #ffffff;
+      opacity: 1;
+    }
+  }
+}

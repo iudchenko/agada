@@ -1,0 +1,290 @@
+@import "my-account-loggedin";
+@import "order-history";
+
+.my-account {
+  font-family: $font__main;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #8b8b8b;
+
+  h1.entry-title {
+    // font-family: $font__main;
+    // font-style: normal;
+    // font-weight: 500;
+    // font-size: 24px;
+    // line-height: 29px;
+    // color: #5d5d5d;
+    margin: 32px 0 25px 0;
+  }
+
+  h2 {
+    font-family: $font__main;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #5d5d5d;
+    text-transform: none;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="url"],
+  input[type="password"],
+  input[type="search"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="range"],
+  input[type="date"],
+  input[type="month"],
+  input[type="week"],
+  input[type="time"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="color"] {
+    width: 100%;
+    height: 40px;
+    padding: 10px 16px;
+    border-radius: 0px !important;
+    &:focus {
+      border-color: #000;
+    }
+  }
+
+  /* The checkmark-container */
+  .checkmark-container {
+    display: block;
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 16px;
+    height: 15px;
+    cursor: pointer;
+    font-family: $font__main;
+    // color: #7f573b;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #8b8b8b;
+    // line-height: 15px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  /* Hide the browser's default checkbox */
+  .checkmark-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    background-color: #fff;
+    border: 1px solid #c8c8c8;
+  }
+
+  /* On mouse-over, add a grey background color */
+  .checkmark-container:hover input ~ .checkmark,
+  .checkmark-container input:focus ~ .checkmark {
+    background-color: #f8f8f8;
+  }
+
+  /* When the checkbox is checked, add a color background */
+  .checkmark-container input:checked ~ .checkmark {
+    background-color: #7f573b;
+  }
+
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the checkmark when checked */
+  .checkmark-container input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  /* Style the checkmark/indicator */
+  .checkmark-container .checkmark:after {
+    left: 4px;
+    top: 0px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  span.optional {
+    display: none;
+  }
+  .woocommerce-terms-and-conditions-link,
+  .woocommerce-privacy-policy-link {
+    text-transform: capitalize;
+  }
+
+  button {
+    width: 100% !important;
+    max-width: 400px;
+    font-family: $font__main;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #000 !important;
+  }
+
+  .woocommerce-form-login__rememberme {
+    display: block;
+    padding-bottom: 16px;
+  }
+  .woocommerce-LostPassword a {
+    text-decoration: none;
+    font-family: $font__main;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #7f573b;
+  }
+
+  &__signin-note {
+    max-width: 310px;
+  }
+
+  &__register-note {
+    max-width: 346px;
+    p {
+      margin: 0;
+    }
+    ul {
+      margin: 0;
+      padding: 1em 0 1em 1em;
+      [dir="rtl"] & {
+        padding: 1em 1em 1em 0;
+      }
+    }
+  }
+
+  &__pass-note {
+    max-width: 321px;
+  }
+
+  .woocommerce-privacy-policy-text {
+    order: 99;
+  }
+
+  .register-btn-row {
+    order: 98;
+  }
+
+  #news_subscribe_checkbox_field {
+    order: 97;
+  }
+
+  &__columns {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 61px;
+    gap: 16px;
+    @media screen and (max-width: $breakpoint-mobile) {
+      flex-flow: column nowrap;
+    }
+  }
+
+  &__column {
+    flex: 1;
+    width: 100%;
+    max-width: 400px;
+  }
+  &__or {
+    height: 390px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-family: $font__main;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    @media screen and (max-width: $breakpoint-mobile) {
+      height: auto;
+      width: 100%;
+      justify-content: center;
+      position: relative;
+    }
+
+    color: #aeaeae;
+    &:before {
+      content: "";
+      width: 1px;
+      height: calc(50% - 16px);
+      background-color: #d6d6d6;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      @media screen and (max-width: $breakpoint-mobile) {
+        left: 0;
+        top: 50%;
+        height: 1px;
+        width: calc(50% - 32px);
+        transform: translateY(-50%);
+      }
+    }
+    &:after {
+      content: "";
+      width: 1px;
+      height: calc(50% - 16px);
+      background-color: #d6d6d6;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      @media screen and (max-width: $breakpoint-mobile) {
+        right: 0;
+        left: auto;
+        top: 50%;
+        height: 1px;
+        width: calc(50% - 32px);
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  form.login {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 15px;
+    p {
+      margin: 0;
+    }
+  }
+  form.register {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 15px;
+    p {
+      margin: 0;
+    }
+  }
+}

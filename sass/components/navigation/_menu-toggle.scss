@@ -1,0 +1,59 @@
+/* Toggle */
+.menu-toggle {
+  display: block;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  cursor: pointer;
+  @media screen and (max-width: $breakpoint-tablet-landscape) {
+    padding: 20px;
+    margin-left: -20px;
+    [dir="rtl"] & {
+      margin-left: 0;
+      margin-right: -20px;
+    }
+  }
+
+  .menu-toggle__lines {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    width: 20px;
+    height: 14px;
+    span {
+      height: 1px;
+      background-color: $color__text-secondary;
+      transition: all 0.3s ease;
+    }
+    .menu-toggle__line-1,
+    .menu-toggle__line-3 {
+      width: 14px;
+    }
+    .menu-toggle__line-2 {
+      width: 20px;
+    }
+  }
+}
+
+.main-navigation.toggled {
+  .menu-toggle__lines div {
+    // width: 24.41px;
+    width: 20px;
+  }
+  .menu-toggle__line-2 {
+    opacity: 0;
+  }
+  .menu-toggle__line-1 {
+    transform: translateY(6.5px) rotate(45deg);
+  }
+  .menu-toggle__line-3 {
+    transform: translateY(-6.5px) rotate(-45deg);
+  }
+}
+
+@media screen and (min-width: $breakpoint-tablet-landscape) {
+  .menu-toggle {
+    display: none;
+  }
+}

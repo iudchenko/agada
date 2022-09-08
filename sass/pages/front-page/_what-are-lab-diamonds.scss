@@ -1,0 +1,41 @@
+.what-are-lab-diamonds {
+  margin: 96px 0 48px 0;
+  .container {
+    img {
+      object-fit: contain;
+      @media screen and (max-width: $breakpoint-mobile) {
+        height: 260px;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      padding: 0;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+  }
+
+  &__text {
+    @media screen and (max-width: $breakpoint-mobile) {
+      padding: 0 24px;
+    }
+  }
+  // &__desc {
+  //   line-height: 19px;
+  // }
+
+  // &__title {
+  //   margin: 0 0 32px 0;
+  //   font-style: normal;
+  //   font-weight: 500;
+  //   font-size: 24px;
+  //   line-height: 29px;
+  //   @media screen and (max-width: $breakpoint-mobile) {
+  //     font-size: 18px;
+  //   }
+  // }
+}

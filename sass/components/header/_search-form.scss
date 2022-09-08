@@ -1,0 +1,48 @@
+.main-search {
+  position: absolute !important;
+  bottom: 10px;
+  right: 0;
+  [dir="rtl"] & {
+    right: auto;
+    left: 0;
+  }
+  // transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  @media screen and (max-width: $breakpoint-tablet-landscape) {
+    position: static !important;
+  }
+
+  &.hidden {
+    // display: none;
+    .searchform {
+      transform: translateY(100%);
+    }
+  }
+  .searchform {
+    display: flex;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(0%);
+    border-bottom: 1px solid #000;
+    @media screen and (max-width: $breakpoint-mobile) {
+      justify-content: space-between;
+    }
+    &__input {
+      width: 200px;
+      border: none;
+      border-radius: 0;
+      height: 40px;
+      padding: 0 0 0 10px;
+    }
+    &__searchsubmit {
+      width: 40px;
+      min-width: 40px;
+      height: 40px;
+      padding: 0;
+      background: url("/img/menu/search-icon.svg") no-repeat center center/19px
+          19px,
+        #fff;
+      border: none;
+      border-radius: 0;
+    }
+  }
+}

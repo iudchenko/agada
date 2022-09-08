@@ -1,0 +1,23 @@
+.product__images {
+  display: flex;
+  gap: 45px;
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    gap: 20px;
+  }
+
+  .product__gallery {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
+    cursor: pointer;
+    img {
+      width: 60px;
+      height: auto;
+      object-fit: contain;
+      &.selected {
+        border: 1px solid #7f573b;
+      }
+    }
+  }
+}

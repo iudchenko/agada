@@ -1,0 +1,103 @@
+/*
+Theme Name: AgAdA
+
+WooCommerce styles override
+*/
+
+// WooCommerce color variables
+$woocommerce__color-error: #e74c3c;
+$woocommerce__color-success: #58b19f;
+$woocommerce__color-info: #3498db;
+
+// Import variables and mixins
+@import "abstracts/abstracts";
+
+/**
+ * Shop tables
+ */
+@import "plugins/woocommerce/tables";
+
+/**
+ * Products
+ */
+@import "plugins/woocommerce/products";
+
+/**
+ * Single product
+ */
+@import "plugins/woocommerce/single-product";
+
+/**
+ * Variable product
+ */
+ @import "plugins/woocommerce/variable-product";
+
+/**
+ * Checkout
+ */
+@import "plugins/woocommerce/checkout";
+
+/**
+ * General WooCommerce components
+ */
+@import "plugins/woocommerce/components";
+
+/**
+ * WooCommerce widgets
+ */
+@import "plugins/woocommerce/widgets";
+
+/**
+ * Related products
+ */
+@import "plugins/woocommerce/related-products";
+
+/**
+ * Recently viewed products
+ */
+@import "plugins/woocommerce/recently-viewed";
+
+/**
+ * Buttons
+ */
+@import "plugins/woocommerce/buttons";
+
+/**
+ * About diamond
+ */
+@import "plugins/woocommerce/about-diamond";
+
+/**
+ * Diamond size chart
+ */
+@import "plugins/woocommerce/diamond-sizes";
+
+/**
+ * Color chart
+ */
+@import "plugins/woocommerce/color-chart";
+
+/**
+ * About diamond graph charts
+ */
+@import "plugins/woocommerce/graph-chart";
+
+/**
+ * Compare diamonds section
+ */
+@import "plugins/woocommerce/compare-diamonds";
+
+/**
+ * Product images
+ */
+@import "plugins/woocommerce/product-images";
+
+/**
+ * Pagination
+ */
+@import "plugins/woocommerce/pagination";
+
+/**
+ * Color swatches
+ */
+@import "plugins/woocommerce/color-swatches";

@@ -1,0 +1,78 @@
+.col-2 {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+
+  > * {
+    flex: 1;
+
+    @media screen and (max-width: $breakpoint-desktop) {
+      max-width: calc(50% - 50px / 2);
+    }
+    @media screen and (max-width: $breakpoint-tablet) {
+      max-width: 100%;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    flex-flow: row wrap;
+  }
+  @media screen and (max-width: $breakpoint-mobile) {
+    gap: 25px;
+  }
+}
+
+.col-2--merged {
+  display: flex;
+  .col {
+    padding: 30px 40px;
+    flex: 1;
+    min-height: 468px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 10px;
+
+  }
+  @media screen and (max-width: $breakpoint-tablet) {
+    flex-flow: row wrap;
+    .col {
+      flex: 1 100%;
+      padding: 16px 24px;
+    }
+  }
+  h3 {
+    font-family: $font__main;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: $color__text-secondary;
+    margin: 0;
+  }
+  p {
+    font-family: $font__main;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px; 
+    color: $color__text-secondary;
+    margin: 0;
+    
+  }
+
+
+}
+
+
+.col-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  @media screen and (max-width: $breakpoint-tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

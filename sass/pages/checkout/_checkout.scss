@@ -1,0 +1,128 @@
+.checkout.woocommerce-checkout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  padding-bottom: 100px;
+  @media screen and (max-width: $breakpoint-mobile) {
+    grid-template-columns: 1fr;
+  }
+
+  label {
+    display: none;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="url"],
+  input[type="password"],
+  input[type="search"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="range"],
+  input[type="date"],
+  input[type="month"],
+  input[type="week"],
+  input[type="time"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="color"] {
+    width: 100%;
+    height: 40px;
+    padding: 10px 16px;
+    border-radius: 0px !important;
+    &:focus {
+      border-color: #000;
+    }
+  }
+  textarea {
+    resize: none;
+    border-radius: 0px !important;
+    &:focus {
+      border-color: #000;
+    }
+  }
+
+  .customer_details {
+    grid-column: 1 / 2;
+    @media screen and (max-width: $breakpoint-mobile) {
+      grid-column: 1 / -1;
+    }
+    .woocommerce-billing-fields__field-wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      p {
+        margin: 0;
+      }
+      gap: 10px;
+      @media screen and (max-width: $breakpoint-mobile) {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+  .customer_order-review {
+    grid-column: 2 / -1;
+    border: 1px solid #c8c8c8;
+    padding: 15px;
+    font-size: 14px;
+    @media screen and (max-width: $breakpoint-mobile) {
+      grid-column: 1 / -1;
+    }
+    th.product-name,
+    th.product-total {
+      display: none;
+    }
+
+    #order_review {
+      .cart-subtotal {
+        th,
+        td {
+          padding-top: 15px;
+        }
+      }
+      .cart_item td {
+        padding: 5px;
+      }
+      .variation {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 10px;
+        dd {
+          margin: 0;
+        }
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+  .woocommerce-NoticeGroup-checkout {
+    grid-column: 1 / -1;
+    @media screen and (max-width: $breakpoint-mobile) {
+      grid-column: 1 / -1;
+    }
+  }
+  .woocommerce-checkout-payment {
+    ul {
+      margin: 0;
+      list-style-type: none;
+    }
+  }
+  #place_order {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: #000;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 0;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

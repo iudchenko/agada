@@ -1,0 +1,134 @@
+.lab-diamonds {
+  margin: 0 0 32px 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    gap: 30px;
+    overflow: hidden;
+    @media screen and (max-width: $breakpoint-tablet) {
+      flex-flow: column nowrap;
+    }
+  }
+
+  &__mobile-btn {
+    display: none;
+    button {
+      font-size: 16px;
+    }
+    @media screen and (max-width: $breakpoint-tablet) {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  &__filters {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 0 270px;
+    max-width: 270px;
+    gap: 50px;
+    @media screen and (max-width: $breakpoint-tablet) {
+      gap: 0;
+      position: absolute;
+      top: $mobile__header;
+      left: 0;
+      background: #fff;
+      z-index: 99;
+      padding: 0 32px;
+      min-width: 334px;
+      transform: translateX(-100%);
+
+      // .admin-bar & {
+      //   $narrow-offset: 46px;
+      //   $wide-offset: 32px;
+      //   top: $mobile__header + $narrow-offset;
+      //   @media screen and (min-width: 783px) {
+      //     top: $wide-offset;
+      //   }
+      // }
+
+      [dir="rtl"] & {
+        transform: translateX(100%);
+        left: auto;
+        right: 0;
+      }
+    }
+    &.animate {
+      transition: all 0.3s ease;
+    }
+    &.open {
+      transform: translateX(0%);
+      height: calc(100% - $mobile__header);
+
+      &:before {
+        content: "";
+        background: #000;
+        opacity: 0.5;
+      }
+    }
+  }
+
+  .filter {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 24px;
+    @media screen and (max-width: $breakpoint-tablet) {
+      gap: 16px;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__results {
+    flex: 0 900px;
+    position: relative;
+    @media screen and (max-width: $breakpoint-tablet) {
+      flex: 0 1200px;
+    }
+  }
+
+  &__title {
+    margin: 16px 0 32px 0;
+    font-family: $font__main;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color__text-secondary;
+    @media screen and (max-width: $breakpoint-tablet) {
+      margin: 16px 0 16px 0;
+    }
+  }
+
+  &__back {
+    padding: 0 0 0 24px;
+    position: relative;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    cursor: pointer;
+
+    @media screen and (min-width: $breakpoint-tablet + 1px) {
+      display: none;
+    }
+
+    & span:before {
+      content: url("/img/diamonds/arrow-back.svg");
+      transform: rotate(90deg);
+      position: absolute;
+      left: 0;
+      [dir="rtl"] & {
+        transform: rotate(-90deg);
+        left: auto;
+        right: 0;
+      }
+    }
+    [dir="rtl"] & {
+      padding: 0 24px 0 0;
+    }
+  }
+}

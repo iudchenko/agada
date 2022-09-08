@@ -1,0 +1,52 @@
+@import "search-form";
+
+header.site-header {
+  height: $desktop__header;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: #fff;
+  font-family: $font__secondary;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  z-index: 9999;
+
+  a {
+    &:link,
+    &:visited {
+      color: $color__text-secondary;
+    }
+    &:hover,
+    &:active {
+      color: $color__text-main;
+    }
+  }
+  @media screen and (max-width: $breakpoint-tablet-landscape) {
+    height: $mobile__header;
+
+    .site-branding {
+      max-width: 100px;
+    }
+  }
+  .container {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.site-branding {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 98;
+}
+
+/* WP admin bar fix */
+.sticky-header {
+  position: fixed;
+  top: 0;
+
+  @include admin-sticky-fix;
+}

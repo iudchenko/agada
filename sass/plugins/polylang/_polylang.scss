@@ -1,0 +1,37 @@
+//Language switch
+.pll-parent-menu-item {
+  > a {
+    position: relative;
+    width: 32px;
+
+    &:after {
+      content: url("../img/menu/language-chooser.svg");
+      position: absolute;
+      top: -2px;
+      right: 0px;
+      cursor: pointer;
+
+      [dir="rtl"] & {
+        right: 24px;
+      }
+    }
+  }
+  ul.sub-menu {
+    width: 48px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    li {
+      height: 32px;
+    }
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 48px;
+    }
+  }
+}

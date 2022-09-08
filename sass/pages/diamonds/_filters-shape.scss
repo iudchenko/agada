@@ -1,0 +1,72 @@
+.filters {
+  &__title {
+    font-family: $font__main;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: $color__text-secondary;
+    margin: 0;
+  }
+
+  &__img {
+    object-fit: contain;
+  }
+
+  &__shape,
+  &__type {
+    fieldset {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      // align-items: baseline;
+      gap: 10px;
+      padding: 0;
+      margin: 0;
+      border: none;
+      div {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        height: 60px;
+        width: 60px;
+      }
+    }
+
+    input[type="checkbox"] {
+      display: none;
+    }
+    label {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 5px;
+      height: 100%;
+      padding: 2px;
+      cursor: pointer;
+      font-family: $font__main;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 15px;
+      text-align: center;
+      color: $color__text-secondary;
+      &:lang(ru),
+      &:lang(ar) {
+        font-size: 9px;
+        line-height: 12px;
+      }
+
+      &:hover {
+        color: $color__link-hover;
+        background: #f8f8f8;
+      }
+    }
+    input[type="checkbox"]:checked + label {
+      color: $color__link;
+      // border: 1px solid $color__link;
+      box-shadow: inset 0px 0px 0px 1px #8b8b8b;
+    }
+  }
+}

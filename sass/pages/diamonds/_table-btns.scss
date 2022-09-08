@@ -1,0 +1,33 @@
+.lab-diamonds__btns {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-bottom: 32px;
+  gap: 10px;
+  @media screen and (max-width: $breakpoint-mobile) {
+    flex-flow: row wrap;
+  }
+
+  button {
+    height: 28px;
+    padding: 6px 11px;
+    display: flex;
+    font-family: $font__main;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: none;
+    text-align: center;
+    color: #8b8b8b;
+    background: transparent;
+    border: 1px solid #b6b6b6;
+    &:hover {
+      background: #8b8b8b;
+      color: #fff;
+    }
+    &.active {
+      background: #8b8b8b;
+      color: #fff;
+    }
+  }
+}

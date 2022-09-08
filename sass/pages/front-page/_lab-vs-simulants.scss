@@ -1,0 +1,39 @@
+.lab-vs-simulants {
+  margin: 0 0 48px 0;
+  .container.col-2 {
+    @media screen and (max-width: $breakpoint-tablet) {
+      flex-flow: column-reverse wrap;
+    }
+  }
+
+  &__img {
+    width: 600px;
+  }
+
+  &__text {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    align-self: center;
+    justify-self: flex-end;
+    text-align: right;
+    @media screen and (max-width: $breakpoint-mobile) {
+      text-align: left;
+    }
+  }
+
+  &__title {
+    max-width: 304px;
+    text-align: right;
+    justify-self: flex-end;
+    text-transform: none;
+    @media screen and (max-width: $breakpoint-mobile) {
+      text-align: center;
+      align-self: center;
+    }
+  }
+  &__desc {
+    margin: 0 0 16px 0;
+    // line-height: 19px;
+  }
+}

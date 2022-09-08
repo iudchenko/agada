@@ -1,0 +1,76 @@
+.jewelry__mobile-btns {
+  display: none;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 0;
+  height: 50px;
+  margin-bottom: 16px;
+  position: relative;
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    display: flex;
+  }
+  * {
+    flex: 1;
+    cursor: pointer;
+    text-align: center;
+
+    span {
+      padding-left: 24px;
+      [dir="rtl"] & {
+        padding-right: 24px;
+        padding-left: 0;
+      }
+    }
+  }
+
+  .jewelry__mobile-filtering {
+    span {
+      position: relative;
+    }
+    & span:before {
+      content: "";
+      position: absolute;
+      background: url("/img/diamonds/filters.svg") no-repeat center
+        center/contain;
+      width: 15px;
+      height: 15px;
+      left: 0;
+      [dir="rtl"] & {
+        right: 0;
+      }
+    }
+  }
+
+  .jewelry__mobile-sorting {
+    label {
+      position: relative;
+    }
+    & label:before {
+      content: "";
+      position: absolute;
+      background: url("/img/diamonds/sorting.svg") no-repeat center
+        center/contain;
+      width: 15px;
+      height: 15px;
+      left: -24px;
+      [dir="rtl"] & {
+        right: 24px;
+      }
+    }
+
+    #sortby-mob {
+      font-size: 12px;
+      border: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      display: block;
+      margin: 0 auto;
+      background-color: #fff;
+      option {
+        background-color: #fff;
+      }
+    }
+  }
+}

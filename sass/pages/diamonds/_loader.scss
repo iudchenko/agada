@@ -1,0 +1,28 @@
+.loader {
+  position: absolute;
+  top: 0;
+  margin-top: 150px;
+  height: calc(100% - 150px);
+  width: 100%;
+  background: #fff;
+  opacity: 0.8;
+  z-index: 97;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+  // z-index: -1;
+
+  img {
+    position: fixed;
+    margin: auto;
+    @media screen and (max-width: $breakpoint-mobile) {
+      position: absolute;
+    }
+  }
+}
+
+.jewelry .loader {
+  margin-top: 0;
+  padding-top: 150px;
+}
